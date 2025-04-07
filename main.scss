@@ -1,0 +1,15 @@
+// Sobrescreva variáveis antes do import
+$primary: #007bff; // Exemplo de redefinição de cor principal
+
+// Importa todos os estilos do Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Adicione estilos personalizados
+body {
+  background-color: $primary; // Usando variáveis redefinidas
+}
+
+.custom-class {
+  font-size: 16px;
+  color: darken($primary, 20%);
+}

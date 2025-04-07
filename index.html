@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestão de Chamados e SLA</title>
+    <!-- Fonte Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- Link para o CSS do Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-$roxo-600">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">Logo</a>
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Relatório</a></li>
+                <li class="nav-item"><a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a></li>
+            </ul>
+            <form class="col-md-auto">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            </form>
+        </div>
+    </div>
+</nav>
+
+<!-- Kanban Board -->
+<div class="kanban-board">
+    <div class="column">
+        <h5>Solicitações <button class="add-task-button ">+</button></h5>
+        <div class="task">Tarefa 1</div>
+        <div class="task">Tarefa 2</div>
+    </div>
+    <div class="column">
+        <h5>Em Andamento</h5>
+    </div>
+    <div class="column">
+        <h5>Concluído</h5>
+    </div>
+    <div class="column">
+        <h5>Cancelado
+
+        </h5>
+    </div>
+</div>
+
+<!-- Formulário Global (Para Adicionar Tarefas) -->
+<div id="form-container" class="form-container" style="display: none;"">
+    <div class="form-content">
+        <span class="close-button">&times;</span>
+        <h4>Adicionar novo chamado</h4>
+        <hr>
+        <form id="task-form">
+            <label for="task-name">Quais das opções abaixo se enquadra o estabelecimento:</label>
+            <input type="radio" id="task-name" name="task-name" required>
+            <label for="">Acadêmia</label>
+            <br>
+            <input type="radio" id="task-name" name="task-name" required>
+            <label for="">Barberia</label>
+            <br>
+            <input type="radio" id="task-name" name="task-name" required>
+            <label for="">Salão</label>
+            <br>
+            <hr>
+            <label for="">Qual o motivo do chamado:</label>
+            <br>
+            <input type="radio" id="task-name" name="task-name" required>
+            <label for="">Manutenção</label>
+            <br>
+            <input type="radio" id="task-name" name="task-name" required>
+            <label for="">Instalação</label>
+            <br>
+            <input type="radio" id="task-name" name="task-name" required>
+            <label for="">Check-in fotográfico</label>
+            <br>
+            <hr>
+            <label for="task-details">Nome ou id do cliente:</label>
+            <br>
+            <input type="text" id="task-details" name="task-details" required>
+            <br>
+            <label for="task-details">Descrição do chamado:</label>
+            <br>
+            <textarea id="task-details" name="task-details" rows="4"></textarea>
+            <br>
+            <button type="submit" class="btn btn-primary">Adicionar Tarefa</button>
+        </form>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

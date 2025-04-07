@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilos para barra de navegação */
+.navbar, .navbar-light  {
+    background-color: #9918cc;
+    padding: 10px;
+}
+
+.kanban-board {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.column {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 24.8%;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.column h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.task {
+    background-color: #e7f3fe;
+    border: 1px solid #b3d7ff;
+    border-radius: 3px;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task:hover {
+    background-color: #d0e7ff;
+}
+
+.dialog {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+
+.close-button {
+    cursor: pointer;
+    float: right;
+    font-size: 20px;
+}
+
+/* Estilos para o botão de adicionar tarefa */
+.add-task-button {
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        font-size: 18px;
+        cursor: pointer;
+        margin-left: 10px;
+}
+/* Estilos para a caixa de diálogo */
+.form-container {
+    display: none; /* Oculta o formulário inicialmente */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 460px;
+    height: 580px;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 2.0);
+    display: flex;
+    border-radius: 8px;
+    max-width: 60%; /* limita a largura maxima */
+    padding: 20px;
+    overflow: auto; /*Permite a barra de rolagem */
+}
+.form-content {
+    display: flex;
+    align-items:center;
+    flex-direction:column;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+}
+.close-button {
+    cursor: pointer;
+    align-self: flex-end;
+    font-size: 20px;
+}
+button {
+    margin-top: 1px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+
